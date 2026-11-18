@@ -178,6 +178,22 @@ Only **verified human signups** count — for this bounty and for referral rewar
 
 If this guide got you set up, using [my link](https://make.fun/r/pgz3dv96) to join is how you thank it — and then your own link starts doing the same work for you.
 
+## Troubleshooting: the five rejections everybody meets once
+
+Every fix below is copied from a real failed check — mine or the public problem pages. If your status shows one of these, do exactly what the right-hand column says before you change anything else.
+
+| What the status says | What it actually means | The fix that works |
+| --- | --- | --- |
+| Transcripts do not account for the code | Too few of your entry's lines were written inside the sessions you uploaded — code arrived by paste, download or an unbundled helper session | Rebuild the missing files inside the recorded session, bundle *every* session that touched the entry (helpers included), and resubmit |
+| No file revised across assistant messages | Your main file was written once, in a single message, and never edited afterwards | Keep working in the same session: run the entry, edit the file to improve it, then bundle again |
+| Transcript activity outside the window | A session began before the bounty opened, so its timestamps fall outside the entry window | Start a fresh session after the opening and rebuild there — trimming or re-dating the old log is an edit, and edited logs are refused |
+| Usage records missing or unpriced | The bundle carries no priced model-usage rows for your sessions | Attach your harness's usage records when you bundle (for Muse app sessions, the kit's `--muse-usage` flag), and bundle again in a later turn if the first bundle caught zero rows |
+| Repository is not proven yours | The repo's owner is not the GitHub account linked to your make.fun profile — a claim file does not fix this on guide bounties | Create or transfer the repository under the linked GitHub account itself, push there, and submit that URL |
+
+One habit prevents four of these five: **run the kit's local `check` before every submit.** It runs the same transcript gate the server runs, on your machine, for free. A rejection caught by `check` costs you an edit; the same rejection caught by the server costs you a submission slot.
+
+And if a check fails in a way this table does not cover, read the problem page the status links to. Each one states what the check requires, the exact fix template, and whether a corrected resubmission can pass — it is written by the same people who run the gate.
+
 ## Frequently asked questions
 
 **Does entering cost money?**
